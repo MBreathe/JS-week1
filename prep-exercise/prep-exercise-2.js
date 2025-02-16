@@ -13,13 +13,8 @@ let cycle = 0;
 while (cycle < 2) {
     const currentState = trafficLight.possibleStates[trafficLight.stateIndex];
     console.log("The traffic light is on", currentState);
-    if (trafficLight.stateIndex === 0) {
-        trafficLight.stateIndex++;
-    }
-    else if (trafficLight.stateIndex === 1) {
-        trafficLight.stateIndex++;
-    }
-    else {
+    trafficLight.stateIndex++;
+    if (trafficLight.stateIndex === 3) {
         trafficLight.stateIndex = 0;
         cycle++;
     }
